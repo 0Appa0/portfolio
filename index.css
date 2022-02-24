@@ -223,15 +223,20 @@ body main .title-wrapper .title.dance {
   border-bottom: 0.5px solid grey;
 }
 
+#contact .fun-projects .link-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
 
-#contact .fun-projects a {
-  color: #20c997;
+#contact .fun-projects .link-wrapper .link,.play {
+  color: plum;
   text-transform: capitalize;
   text-decoration: none;
   margin-top: .5rem;
   width: fit-content;
   transition: transform .4s;
 }
+
 
 #contact .fun-projects h1 {
   width: fit-content;
@@ -258,7 +263,9 @@ body main .title-wrapper .title.dance {
   margin-right: 2rem;
   transition: transform .4s;
   justify-content: space-between;
+  cursor: pointer;
 }
+
 #contact .fun-projects .projects-container .projects:hover {
   background: #20c997;
   transform: translateY(-10px) scale(1.06);
@@ -268,6 +275,7 @@ body main .title-wrapper .title.dance {
   width: 100%;
   aspect-ratio: 2.5;
   overflow: hidden;
+  transition: transform .4s;
 }
 
 #contact .fun-projects .projects-container .projects .image-container img {
@@ -287,7 +295,7 @@ body main .title-wrapper .title.dance {
 }
 
 #contact .fun-projects .projects-container .projects:hover a{
-  color: white;
+  color: yellow;
 }
 
 #contact .fun-projects .projects-container a,p,h1 {
@@ -301,6 +309,10 @@ body main .title-wrapper .title.dance {
 #contact .fun-projects .projects-container .projects h1 {
   color: #20c997;
   margin-bottom: 1rem;
+}
+
+#contact .fun-projects .projects-container .projects:hover .image-container {
+  transform: translateY(-10px) scale(1.06);
 }
 
 #contact .fun-projects .projects-container .projects:hover a{
