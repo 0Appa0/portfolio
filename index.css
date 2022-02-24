@@ -1,0 +1,393 @@
+@import url('./animations.css');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  background: black;
+  color: white;
+  position: relative;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+
+p {
+  line-height: 24px;
+}
+.hidden {
+  display: none;
+}
+
+.abs-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body main {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+body main section {
+  width: 95%;
+  margin: 0rem auto;
+  padding: 3rem 0;
+}
+body main .title-wrapper .title {
+  margin: 0.2rem;
+  line-height: 32px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white
+}
+body main .about-me {
+  display: flex;
+  flex-direction: column;
+}
+
+body main .about-me .title-wrapper .title {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+body main .title-wrapper {
+  display: flex;
+}
+body main .title-wrapper .title:hover {
+  color: #20c997;
+}
+
+body main .title-wrapper .title.dance {
+  animation: dance 1s;
+}
+
+#am {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 0.5px solid grey;
+}
+
+#am .title-wrapper:nth-child(1) {
+  animation: translateUp 1s;
+}
+
+#am .title-wrapper:nth-child(2) {
+  animation: translateUp 1s;
+}
+#am .title-wrapper:nth-child(3) {
+  animation: translateDown 1s;
+}
+
+#am .about-me {
+  width: 50%;
+}
+
+#am .canvas {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#am .canvas a {
+  padding: 1rem 3rem;
+  color: white;
+  border: 1px solid #20c997;
+  text-decoration: none;
+  background-size: 200% !important;
+  background-position: left;
+  background: linear-gradient(to left,  #20c997 50%, transparent 50%);
+  transition: background .4s;
+  border-radius: 24px;
+}
+
+#am .canvas a:hover {
+  background-position: right;
+}
+ 
+ 
+#contact .details-wrapper {
+  width: 100%;
+  border-bottom: 0.5px solid grey;
+}
+
+#contact .details-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  justify-content: space-between;
+}
+
+#contact .details-wrapper .details {
+  width: 32%;
+  margin-bottom: 2rem;
+}
+
+#contact .work-experience {
+  display: flex;
+  padding: 2rem 0;
+  flex-direction: column;
+  border-bottom: 0.5px solid grey;
+}
+#contact .work-experience .experience-container {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#contact .work-experience .experience-container .experience {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#contact .work-experience .experience-container .experience p:nth-child(2) {
+  color: #777;
+}
+
+#contact .details-wrapper .details .card {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  cursor: pointer;
+  padding: 2rem;
+  background-position: left;
+  transition: background .5s ease-out;
+  height: 100%;
+  box-shadow: 5.0px 9.9px 9.9px hsl(0deg 0% 0% / 0.35);
+  background-color: #262626;
+  transition: transform .4s;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: popUp 1.4s;
+}
+
+#contact .details-wrapper .details .card:hover {
+  transform: translateY(-10px) scale(1.04);
+  background: #20c997;
+}
+#contact .details-wrapper .details .card .back-face,.front-face {
+  transition: transform .8s;
+}
+
+#contact .details-wrapper .details .card .front-face {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #20c997;
+}
+
+#contact .details-wrapper .details .card .back-face {
+  color: #777;
+}
+
+#contact .details-wrapper .details .card:hover .front-face {
+  transform: translateY(-10px);
+  color: white;
+}
+
+#contact .details-wrapper .details .card:hover .back-face {
+  transform: translateY(-10px) scale(1.06);
+  color: white;
+}
+
+#contact .details-wrapper .details .card p {
+  line-height: 28px;
+}
+
+#contact .fun-projects {
+  padding: 2rem 0;
+  border-bottom: 0.5px solid grey;
+}
+
+
+#contact .fun-projects a {
+  color: #20c997;
+  text-transform: capitalize;
+  text-decoration: none;
+  margin-top: .5rem;
+  width: fit-content;
+  transition: transform .4s;
+}
+
+#contact .fun-projects h1 {
+  width: fit-content;
+}
+
+#contact .fun-projects a:hover {
+  transform: scale(1.1)
+}
+
+#contact .fun-projects .projects-container {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#contact .fun-projects .projects-container .projects {
+  animation: popUp 1.4s;
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 2rem;
+  background: #262626;
+  margin-right: 2rem;
+  transition: transform .4s;
+  justify-content: space-between;
+}
+#contact .fun-projects .projects-container .projects:hover {
+  background: #20c997;
+  transform: translateY(-10px) scale(1.06);
+}
+
+#contact .fun-projects .projects-container .projects .image-container {
+  width: 100%;
+  aspect-ratio: 2.5;
+  overflow: hidden;
+}
+
+#contact .fun-projects .projects-container .projects .image-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  padding : 1rem;
+  animation: animateImageContainer 19s infinite;
+}
+
+#contact .fun-projects .projects-container .projects .image-container.delay img {
+  animation-delay: 2s;
+}
+
+#contact .fun-projects .projects-container .projects .image-container:hover img {
+  animation-play-state: paused;
+}
+
+#contact .fun-projects .projects-container .projects:hover a{
+  color: white;
+}
+
+#contact .fun-projects .projects-container a,p,h1 {
+  transition: transform .8s;
+}
+
+#contact .fun-projects .projects-container .projects p {
+  color: #777;
+}
+
+#contact .fun-projects .projects-container .projects h1 {
+  color: #20c997;
+  margin-bottom: 1rem;
+}
+
+#contact .fun-projects .projects-container .projects:hover a{
+  transform: translateY(-10px) scale(1.06);
+}
+#contact .fun-projects .projects-container .projects:hover p{
+  transform: translateY(-10px) scale(1.06);
+  color: white;
+}
+#contact .fun-projects .projects-container .projects:hover h1{
+  transform: translateY(-10px) scale(1.06);
+  color: white;
+}
+
+
+
+@media (max-width: 1366px) {
+  body main .about-me .title-wrapper .title {
+    font-size: 3.8rem;
+    line-height: 3.8rem;
+  }
+}
+@media (max-width: 1024px) {
+  body main .about-me .title-wrapper .title {
+    font-size: 3.3rem;
+    line-height: 3.3rem;
+  }
+  #am .about-me {
+    width: 100%;
+  }
+  #am .canvas {
+    width: 100%;
+    padding-top: 2rem;
+    justify-content: start;
+  }
+  #contact .details-wrapper {
+    width: 100%;
+  }
+  #contact .fun-projects .projects-container .projects .image-container img{
+    object-fit: contain;
+  }
+  #contact .fun-projects .projects-container {
+    justify-content: space-between;
+  }
+  #contact .fun-projects .projects-container .projects {
+    width: 47%;
+    margin-right: 0rem;
+  }
+}
+@media (max-width: 800px) {
+  #contact .details-wrapper .details {
+    width: 48%;
+  }
+}
+@media (max-width: 640px) {
+  body main .about-me .title-wrapper .title {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  #contact .details-wrapper .details {
+    width: 48%;
+  }
+  #contact .fun-projects .projects-container .projects {
+    width: 100%;
+    margin-right: 0rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  body main .about-me .title-wrapper .title {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  #contact .details-wrapper .details {
+    width: 100%;
+  }
+  #contact .details-wrapper .details .card {
+    padding: 2rem ;
+  }
+  
+  #contact .fun-projects .projects-container .projects {
+    width: 100%;
+    margin-right: 0rem;
+    margin-bottom: 2rem;
+  }
+  #contact .work-experience .experience-container .experience {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
