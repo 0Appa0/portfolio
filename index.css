@@ -163,6 +163,10 @@ body main .title-wrapper .title.dance {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  border: 1px solid #3c7f6b;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  padding: 1rem;
 }
 #contact .work-experience .experience-container .experience p:nth-child(2) {
   color: #777;
@@ -261,6 +265,7 @@ body main .title-wrapper .title.dance {
   padding: 2rem;
   background: #262626;
   margin-right: 2rem;
+  margin-bottom: 2rem;
   transition: transform .4s;
   justify-content: space-between;
   cursor: pointer;
